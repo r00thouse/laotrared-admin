@@ -1,0 +1,986 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dupl",
+				"duplicatedIps"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 202.0,
+		"last_filter": "wrap",
+		"selected_items":
+		[
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"wrap to",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"toggle me",
+				"View: Toggle Menu"
+			],
+			[
+				"wrap toggle",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wrap t",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wrap tog",
+				"Word Wrap: Toggle"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"toggle menu",
+				"View: Toggle Menu"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"toggle men",
+				"View: Toggle Menu"
+			],
+			[
+				"delete curr",
+				"ANF: Delete Current File"
+			],
+			[
+				"delete cf",
+				"ANF: Delete Current File"
+			],
+			[
+				"new file",
+				"ANF: New File"
+			],
+			[
+				"delete curr f",
+				"ANF: Delete Current File"
+			],
+			[
+				"dcf",
+				"ANF: Delete Current File"
+			],
+			[
+				"delete current file",
+				"ANF: Delete Current File"
+			],
+			[
+				"toggle",
+				"View: Toggle Menu"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"toggl ",
+				"View: Toggle Menu"
+			],
+			[
+				"theme",
+				"Themr: List themes"
+			],
+			[
+				"plain text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"toggle ",
+				"View: Toggle Menu"
+			],
+			[
+				"deletecurre",
+				"ANF: Delete Current File"
+			],
+			[
+				"thee",
+				"Themr: List themes"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"new fil",
+				"ANF: New File"
+			],
+			[
+				"new fi",
+				"ANF: New File"
+			],
+			[
+				"themr",
+				"Themr: List themes"
+			],
+			[
+				"the",
+				"Themr: List themes"
+			],
+			[
+				"themer",
+				"Themr: Next theme"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				" install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/sergio/code/repos/laotrared-admin"
+	],
+	"file_history":
+	[
+		"/home/sergio/code/repos/build/deploy/environment/qa3/bfeed/xtime.override.properties",
+		"/home/sergio/code/repos/build/deploy/environment/qa3/bfeed/honda.servicestypes.properties",
+		"/home/sergio/code/repos/build/deploy/environment/ptr1aus/bfeed/xtime.override.properties",
+		"/home/sergio/code/repos/build/deploy/environment/ptr1aus/bfeed/honda.servicestypes.properties",
+		"/home/sergio/code/repos/build/deploy/environment/uat1/xss/xdi_commons.properties",
+		"/home/sergio/code/repos/build/deploy/environment/uat1/xss/xtime.override.properties",
+		"/home/sergio/code/repos/build/deploy/environment/ptr1aus/xss/xdi_commons.properties",
+		"/home/sergio/code/repos/build/deploy/scripts/trunk/artifacts.tmpl",
+		"/home/sergio/code/repos/build/deploy/environment/ptr1aus/xss/xtime.override.properties",
+		"/home/sergio/code/repos/build/deploy/scripts/trunk/ndeployBinaryCode.sh",
+		"/home/sergio/code/repos/build/deploy/environment/uat1/xss/platform_service_log4j.xml",
+		"/home/sergio/code/repos/build/deploy/environment/qa1/xss/xdi_commons.properties",
+		"/home/sergio/code/repos/build/deploy/environment/qa1/xss/xtime.override.properties",
+		"/home/sergio/code/repos/build/deploy/scripts/trunk/servers_sit1.py",
+		"/home/sergio/code/repos/build/deploy/scripts/trunk/cluster.py",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/prodaus/x9.json",
+		"/home/sergio/code/repos/build/chef-repo/roles/xoe_batch.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/production/xws.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/nonprod/devops-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1aus/oepartptr1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/production/oepart-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/qa1/oepartqa1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_apache/recipes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/app-conf/recipes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_apache/templates/default/bashrc.erb",
+		"/home/sergio/code/repos/build/chef-repo/roles/apache.json",
+		"/home/sergio/code/repos/build/chef-repo/roles/oepart.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/ptr1aus/xhttpd.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_override/recipes/default.rb",
+		"/home/sergio/Documentos/laser_mirrors",
+		"/home/sergio/code/repos/build/chef-repo/nodes/qa3/oepartqa3-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/stg1aus/oepartstg1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/stg1/oepartstg1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/dev1/oepartdev1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1/oepartptr1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1aus/extptr1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1/bfeedptr1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1/extptr1-02sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/ptr1aus/xps.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/ptr1aus/backfeed.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/ptr1aus/oepart.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/production/backfeed.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/production/xps.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1aus/xpsptr1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1/xpsptr1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/qa2/xpsqa2-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/qa1aus/xpsqa1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/qa1/xpsqa1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/ptr1/xps.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/stg1aus/xps.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/qa1aus/xps.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/ptr1/backfeed.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/qa1aus/bfeedqa1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/qa1aus/backfeed.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_ftpdata_mount/recipes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/qa1/xps.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1aus/bfeedptr1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1aus/xoebatchptr1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/qa1/xoebatchqa1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_hostname/attributes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_hostname/templates/default/custom_hosts.erb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_hostname/templates/default/hosts.nosetip.erb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_hostname/templates/default/hosts.setip.erb",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsptr2/reconmvsptr2-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/environments/mvsptr2.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/ptr1aus/enrlptr1-99sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_hostname/recipes/xtime.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_aproxy/templates/default/httpd-proxy.conf.erb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_hostname/README.md",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/xt.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/x12.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/recon.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/app-conf.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/biz-conf.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/exeter.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/login.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsptr2/xt.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsptr2/x12.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsptr2/recon.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsptr2/app-conf.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsptr2/biz-conf.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsptr2/exeter.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsptr2/login.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/mvsstg1/consu-conf.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsptr2/extmvsptr2-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsptr2/loginmvsptr2-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/environments/mvsstg1.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/dev3/xoerandev3-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsptr2/x12mvsptr2-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsstg1/x12mvsstg1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsstg1/extmvsstg1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsstg1/loginmvsstg1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/mvsstg1/reconmvsstg1-01sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/roles/recon.json",
+		"/home/sergio/code/repos/build/chef-repo/roles/exeternfs.json",
+		"/home/sergio/code/repos/build/chef-repo/nodes/stg1/extstg1-02sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/qa1/backfeed.json",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/stg1/backfeed.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/resources/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/roles/aproxy.json",
+		"/home/sergio/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_analytics/recipes/analytics_httpd.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_aproxy/recipes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/nodes/nonprod/aproxyn-03sc8.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/apache2/recipes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/apache2/attributes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/biz-conf/metadata.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/consu-conf/metadata.rb",
+		"/home/sergio/code/repos/build/chef-repo/cookbooks/yum/recipes/epel.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/providers/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/providers/null.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/recipes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/recipes/config.rb",
+		"/home/sergio/code/repos/build/chef-repo/Rakefile",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/apache2/recipes/mod_heartbeat.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/README.md",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/attributes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/libraries/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/data_bags/nonprod/aproxy.json",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_base/recipes/modauthkeys.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/templates/default/ha.cf.erb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/templates/default/authkeys.erb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_heartbeat/templates/default/haresources.erb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_aproxy/recipes/site-cookbooks",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_webspheremq8/recipes/default.rb",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/xtime_base/recipes/xtime.rb",
+		"/home/sergio/rsyncrootdata.sh",
+		"/home/sergio/code/repos/build/chef-repo/site-cookbooks/ran2/templates/default/rsyncdataroot.sh.erb"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 112.0,
+		"where_history":
+		[
+			"deploy/environment/qa1/xss",
+			"",
+			"*.json",
+			"",
+			"./site-cookbooks/",
+			"./site-cookbooks",
+			"site-cookbooks",
+			"",
+			"site-cookbooks/xtime_crontab",
+			"*.json",
+			"",
+			"*.rb",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"xtime_apache",
+			"ftpdata",
+			"domain",
+			"servicetabEnterprise",
+			"172.20.126.252",
+			"platform-ci2.xtime.com",
+			"DEV4O11",
+			"cluster_user",
+			"/usr/local/apache2/bin/httpd -f",
+			"cluster_user",
+			"role[apache]",
+			"\"cluster_user\" : \"apache\"",
+			"xtime_apache",
+			"cluster_user",
+			"role[apache]",
+			"httpd_conf_dir",
+			"cluster_user",
+			"xtime_apache",
+			"heartbeat",
+			"xtime_heartbeat",
+			"172.20.127.93",
+			"keystore.jks",
+			"9999",
+			"ptr1a",
+			"/etc/hosts",
+			"ptr1/",
+			"dev3/",
+			"xtime_hostname",
+			"/etc/hosts",
+			"login",
+			"HeartBeatResource",
+			"intuser",
+			"https://hyundaibeauce215001.sertidns.com:10063",
+			"https://hyundaibeauce215001.sertidns.com:10063/",
+			"BEAUCEHYU",
+			"xtime-httpd",
+			"cluster_user",
+			"recipe",
+			"apachew",
+			"-k start",
+			"reci",
+			"xtime_apache",
+			"usr/sbin/httpd",
+			"/usr/local",
+			"package",
+			"/usr/local/apachew",
+			"/usr/local/apache2",
+			"httpd_conf_dir",
+			"}",
+			"/user/local/apache2",
+			"apache",
+			"httpd_conf_dir",
+			"xtime_apache",
+			"XTM20160316161627",
+			"https://lasalleford417000.sertidns.com:10063",
+			"https://lasalleford417000.sertidns.com:10063/ timeout=45",
+			"XTM20160316161627",
+			"site-cookbooks",
+			"heartbeat",
+			"xtime_heartbeat",
+			"authkeys",
+			"xtime_heartbeat",
+			"heartbeat",
+			"pacemaker",
+			"cluster-glue",
+			"for",
+			"xtime_heartbeat",
+			"package",
+			"heartbeat",
+			"yum_package",
+			":install",
+			"wget",
+			"emacs",
+			"package",
+			"yum",
+			"scripts",
+			"role",
+			"key",
+			"xtime_phantomjs",
+			"date",
+			"oepart",
+			"hostname",
+			"25 17 2",
+			"59 17-23",
+			"15 22",
+			"00 21",
+			"cron '",
+			"process-tsd ",
+			"cron '",
+			"expand_selection",
+			"command",
+			"expand_selection",
+			"ctrl+l\"",
+			"ctrl+l",
+			"ctrl+l\"",
+			"172.[0-9]*",
+			"172",
+			"cron",
+			"cron '",
+			"crontab_user",
+			"cron '",
+			"crontab",
+			"include",
+			"recipe",
+			"setconfigurations",
+			"java_home",
+			"checksum",
+			"flavor",
+			"jce",
+			"unless",
+			"platform_family",
+			"ftpdata does not exist",
+			"package",
+			"/mounts/ftpdata",
+			"/mounts/ftparchive",
+			"/mounts/ftparchive}",
+			"attribute :network,",
+			"/mounts/ftpdata",
+			"/mounts/ftpdata'",
+			"group",
+			"mode",
+			"/mounts/ftpdata",
+			"nfs",
+			"network",
+			"nfs",
+			"network",
+			"\\s+$",
+			"ldap"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"DEST_FILE",
+			"TEMPORAL_ENV",
+			""
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 116.0
+	},
+	"output.find_results":
+	{
+		"height": 128.0
+	},
+	"pinned_build_system": "",
+	"project": "laotrared-admin.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"trunkartifacts.tmpl",
+				"scripts/trunk/artifacts.tmpl"
+			],
+			[
+				"art",
+				"scripts/trunk/artifacts.tmpl"
+			],
+			[
+				"trunknbinarycode",
+				"scripts/trunk/ndeployBinaryCode.sh"
+			],
+			[
+				"artifacts.t",
+				"scripts/trunk/artifacts.tmpl"
+			],
+			[
+				"trunknbia",
+				"scripts/trunk/ndeployBinaryCode.sh"
+			],
+			[
+				"trunkcluster",
+				"scripts/trunk/cluster.py"
+			],
+			[
+				"servers_sit1",
+				"scripts/trunk/servers_sit1.py"
+			],
+			[
+				"rolesxoebat",
+				"roles/xoe_batch.json"
+			],
+			[
+				"devops",
+				"nodes/nonprod/devops-01sc8.json"
+			],
+			[
+				"rolesapach",
+				"roles/apache.json"
+			],
+			[
+				"rolesapache",
+				"roles/apache.json"
+			],
+			[
+				"xtime_override/recies",
+				"site-cookbooks/xtime_override/recipes/default.rb"
+			],
+			[
+				"nodesoepart",
+				"nodes/production/oepart-01sc8.json"
+			],
+			[
+				"nodesoepartstg1",
+				"nodes/stg1/oepartstg1-01sc8.json"
+			],
+			[
+				"nodesoepart-",
+				"nodes/dev1/oepartdev1-99sc8.json"
+			],
+			[
+				"nodesopepart",
+				"nodes/ptr1/oepartptr1-01sc8.json"
+			],
+			[
+				"xpsptr1-99sc8",
+				"nodes/ptr1aus/xpsptr1-99sc8.json"
+			],
+			[
+				"xoebatchptr1-99sc8",
+				"nodes/ptr1aus/xoebatchptr1-99sc8.json"
+			],
+			[
+				"oepartptr1-99sc8",
+				"nodes/ptr1aus/oepartptr1-99sc8.json"
+			],
+			[
+				"bfeedptr1-99sc8",
+				"nodes/ptr1aus/bfeedptr1-99sc8.json"
+			],
+			[
+				"xoeran",
+				"nodes/dev3/xoerandev3-01sc8.json"
+			],
+			[
+				"databagsbackfee",
+				"data_bags/stg1/backfeed.json"
+			],
+			[
+				"aproxy",
+				"roles/aproxy.json"
+			],
+			[
+				"nodesaproxy",
+				"nodes/nonprod/aproxyn-03sc8.json"
+			],
+			[
+				"xtime_aproxy/reci",
+				"site-cookbooks/xtime_aproxy/recipes/default.rb"
+			],
+			[
+				"aproxy.jo",
+				"roles/aproxy.json"
+			],
+			[
+				"epel",
+				"cookbooks/yum/recipes/epel.rb"
+			],
+			[
+				"databagsaprox",
+				"data_bags/nonprod/aproxy.json"
+			],
+			[
+				"haresources",
+				"site-cookbooks/xtime_heartbeat/templates/default/haresources.erb"
+			],
+			[
+				"ha.cf.erb",
+				"site-cookbooks/xtime_heartbeat/templates/default/ha.cf.erb"
+			],
+			[
+				"authkeys.",
+				"site-cookbooks/xtime_heartbeat/templates/default/authkeys.erb"
+			],
+			[
+				"authkeys",
+				"site-cookbooks/xtime_base/recipes/modauthkeys.rb"
+			],
+			[
+				"httpd-proxy",
+				"site-cookbooks/xtime_aproxy/templates/default/httpd-proxy.conf.erb"
+			],
+			[
+				"xtime_aproxydefault",
+				"site-cookbooks/xtime_aproxy/recipes/default.rb"
+			],
+			[
+				"xtime_aproxy/recipe",
+				"site-cookbooks/xtime_aproxy/recipes/default.rb"
+			],
+			[
+				"xtime_webspheremq8/recipes",
+				"site-cookbooks/xtime_webspheremq8/recipes/default.rb"
+			],
+			[
+				"aproxy-03",
+				"nodes/nonprod/aproxyn-03sc8.json"
+			],
+			[
+				"nodesptr8recon",
+				"nodes/ptr8/reconptr8-01sc8.json"
+			],
+			[
+				"exeterrecipesdefault",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"rsyncdataroo",
+				"site-cookbooks/ran2/templates/default/rsyncdataroot.sh.erb"
+			],
+			[
+				"xtimecrontabrecipesdef",
+				"site-cookbooks/xtime_crontab/recipes/default.rb"
+			],
+			[
+				"dev3xoerandev3",
+				"nodes/dev3/xoerandev3-01sc8.json"
+			],
+			[
+				"ran2recie",
+				"site-cookbooks/ran2/recipes/default.rb"
+			],
+			[
+				"ran2/recipesdefau",
+				"site-cookbooks/ran2/recipes/default.rb"
+			],
+			[
+				"",
+				"site-cookbooks/ran2/README.md"
+			],
+			[
+				"ran2enterprise",
+				"site-cookbooks/ran2/files/default/recon/enterprise.js"
+			],
+			[
+				"randdrivetime",
+				"site-cookbooks/ran2/files/default/recon/drivetime.js"
+			],
+			[
+				"dcf",
+				"cookbooks/xtime_base/files/default/nglibexec/check_flexlm"
+			],
+			[
+				"ran2deliver",
+				"site-cookbooks/ran2/files/default/recon/delivery.js"
+			],
+			[
+				"ran2cover.js",
+				"site-cookbooks/ran2/files/default/recon/cover.js"
+			],
+			[
+				"reconptr8-01sc8",
+				"nodes/ptr8/reconptr8-01sc8.json"
+			],
+			[
+				"oepart",
+				"roles/oepart.json"
+			],
+			[
+				"dev3",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"exeterrecidefa",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"ptr8",
+				"nodes/ptr8/reconptr8-01sc8.json"
+			],
+			[
+				"devext",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"ext-07sc8",
+				"nodes/production/ext-07sc8.json"
+			],
+			[
+				"exedev3",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"exeterdefault",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"exeterrecipesdefau",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"nodesptr8reconpt",
+				"nodes/ptr8/reconptr8-01sc8.json"
+			],
+			[
+				"nodes/dev3/exted",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"exeterrecipesdefa",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"bashrc.erb",
+				"site-cookbooks/xws/templates/default/xws_bashrc.erb"
+			],
+			[
+				"reconptr",
+				"nodes/ptr8/reconptr8-01sc8.json"
+			],
+			[
+				"extdev3-02",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"exeterrecipesdefault.rb",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"dev3exe",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"exeterdefault.",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"extptr8-01sc8.json",
+				"nodes/ptr8/extptr8-01sc8.json"
+			],
+			[
+				"extdev3-02sc8.json",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"extqa3-02sc8.json",
+				"nodes/qa3/extqa3-02sc8.json"
+			],
+			[
+				"phantomjs/recipes",
+				"site-cookbooks/xtime_phantomjs/recipes/default.rb"
+			],
+			[
+				"xtime.rb",
+				"cookbooks/xtime_base/recipes/xtime.rb"
+			],
+			[
+				"nfs.rb",
+				"site-cookbooks/exeter/recipes/nfs.rb"
+			],
+			[
+				"production/ext",
+				"nodes/production/ext-07sc8.json"
+			],
+			[
+				"exterattributesdefault",
+				"site-cookbooks/exeter/attributes/default.rb"
+			],
+			[
+				"exterrecipesdefault",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"exeterattributesdefa",
+				"site-cookbooks/exeter/attributes/default.rb"
+			],
+			[
+				"extdev02sc8.sjon",
+				"nodes/dev3/extdev3-02sc8.json"
+			],
+			[
+				"exeterrecipesdef",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"exeterrecipesdeta",
+				"site-cookbooks/exeter/recipes/default.rb"
+			],
+			[
+				"ext-07sc8.json",
+				"nodes/production/ext-07sc8.json"
+			],
+			[
+				"exeterattri",
+				"exeter/attributes/default.rb"
+			],
+			[
+				"exeterrecipes/default",
+				"exeter/recipes/default.rb"
+			],
+			[
+				"dockerredi",
+				"docker_redis/Dockerfile"
+			],
+			[
+				"dockerredis",
+				"docker_redis"
+			],
+			[
+				"docker",
+				"example1/Dockerfile"
+			],
+			[
+				"wiho",
+				"exampleGosu/withoutGosu/Dockerfile"
+			],
+			[
+				"examplegosu",
+				"exampleGosu/Dockerfile"
+			],
+			[
+				"examplego",
+				"exampleGosu/.Dockerfile.swp"
+			],
+			[
+				"apachedefa",
+				"apache/recipes/default.rb"
+			],
+			[
+				"svndefa",
+				"svn_server/recipes/default.rb"
+			],
+			[
+				"defa",
+				"motd/recipes/default.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"bash",
+				"~/code/bash/bash.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 329.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
