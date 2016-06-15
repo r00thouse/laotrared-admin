@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', function() {
+    return view('login.login');
+});
+
+Route::get('/signup', function() {
+    return view('login.signup');
+});
+
 
 Route::get('panel/nodos', ['uses' => 'NodeController@index']);
 Route::get('panel/nodos/{id}', ['uses' => 'NodeController@show']);
