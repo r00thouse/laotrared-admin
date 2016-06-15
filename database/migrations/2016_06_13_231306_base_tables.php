@@ -12,29 +12,46 @@ class BaseTables extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        });
+        \DB::beginTransaction();
+        try {
+            Schema::create('users', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->string('email')->unique();
+                $table->string('password');
+                $table->rememberToken();
+                $table->timestamps();
+            });
 
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token')->index();
-            $table->timestamp('created_at');
-        });
+            Schema::create('password_resets', function (Blueprint $table) {
+                $table->string('email')->index();
+                $table->string('token')->index();
+                $table->timestamp('created_at');
+            });
 
-        Schema::create('nodes', function($t) {
-            $t->increments('id');
-            $t->string('name');
-            $t->text('description');
-            $t->decimal('latitude', 10, 2);
-            $t->decimal('longitude', 10, 2);
-            $t->timestamps();
-        });
+            Schema::create('nodes', function($t) {
+                $t->increments('id');
+                $t->string('name');
+                $t->text('description');
+                $t->decimal('latitude', 10, 2);
+                $t->decimal('longitude', 10, 2);
+                $t->timestamps();
+            });
+
+            Schema::create('node_user', function($t) {
+                $t->increments('id');
+                $t->integer('node_id')->unsigned()->nullable();
+                $t->integer('user_id')->unsigned()->nullable();
+                $t->timestamps();
+
+                $t->foreign('node_id')->references('id')->on('nodes')->onDelete('SET NULL');
+                $t->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
+            });
+
+            \DB::commit();
+        } catch(Exception $e) {
+            \DB::rollback();
+        }
     }
 
     /**
@@ -47,5 +64,6 @@ class BaseTables extends Migration
         Schema::dropIfExists('nodes');
         Schema::dropIfExists('password_resets');
         Schema::dropIfExists('users');
+        Schema::dropIfExists('node_user');
     }
 }
