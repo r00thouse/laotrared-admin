@@ -6,6 +6,7 @@
     <div class="col-md-4 col-md-offset-3">
       <h1>Inicio de Sesión</h1>
       <form method="post" accept-charset="utf-8" class="form">
+        {{ csrf_field() }}
         <div class="form-grpup">
           <label>Email:</label>
           <input type="email" class="form-control" autocomplete="off" name="email" placeholder="juan@ejemplo.com" />

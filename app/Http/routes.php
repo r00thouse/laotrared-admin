@@ -15,20 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function() {
-    return view('login.login');
+Route::get('/login', ['uses' => 'Auth\AuthController@getLogin']);
+Route::get('/signup', ['uses' => 'Auth\AuthController@getRegister']);
+Route::post('/login', ['uses' => 'Auth\AuthController@postLogin']);
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('panel/nodos', ['uses' => 'NodeController@index']);
+    Route::get('panel/nodos/{id}', ['uses' => 'NodeController@show']);
+    Route::get('panel/nodos/crear', ['uses' => 'NodeController@create']);
+    Route::get('panel/nodos/{id}/editar', ['uses' => 'NodeController@edit']);
+
+    Route::post('panel/nodos/crear', ['uses' => 'NodeController@store']);
+    Route::put('panel/nodos/{id}/editar', ['uses' => 'NodeController@update']);
+    Route::delete('panel/nodos/{id}', ['uses' => 'NodeController@destroy']);
 });
-
-Route::get('/signup', function() {
-    return view('login.signup');
-});
-
-
-Route::get('panel/nodos', ['uses' => 'NodeController@index']);
-Route::get('panel/nodos/{id}', ['uses' => 'NodeController@show']);
-Route::get('panel/nodos/crear', ['uses' => 'NodeController@create']);
-Route::get('panel/nodos/{id}/editar', ['uses' => 'NodeController@edit']);
-
-Route::post('panel/nodos/crear', ['uses' => 'NodeController@store']);
-Route::put('panel/nodos/{id}/editar', ['uses' => 'NodeController@update']);
-Route::delete('panel/nodos/{id}', ['uses' => 'NodeController@destroy']);
