@@ -12,6 +12,16 @@ Entrar al directorio del proyecto y ejecutar
 
     $ composer install
 
+## Configuración
+La configuración debe ser especificada en el archivo .env donde cada quien puede poner configuraciones personalizadas. Este archivo no es versionado pero existe un archivo de ejemplo .env.example y es necesario copiarlo para tener un archivo de configuración propio
+
+    $ cp .env.example .env
+
+Luego es necesario generar la key de la aplicación, para ello ejecutar
+
+    $ php artisan key:generate
+
+### Configuración de la base de datos
 Crear una base de datos en mariadb, por ejemplo laotrared y especificar en el archivo .env en la sección:
 
     DB_CONNECTION=mysql
