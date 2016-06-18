@@ -14,21 +14,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        Blade::directive('city', function($expression) {
-            $cities = [
-                'lapaz' => 'La Paz',
-                'beni' => 'Beni',
-                'cbba' => 'Cochabamba',
-                'stacruz' => 'Santa Cruz',
-                'oruro' => 'Oruro',
-                'potosi' => 'Potosí',
-                'tarija' => 'Tarija',
-                'pando' => 'Pando',
-                'sucre' => 'Sucre'
-            ];
-            // $city = $cities[with($expression)];
-        });
     }
 
     /**

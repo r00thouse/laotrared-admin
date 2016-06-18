@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <h1>Nodos</h1>
+    <h1>Mis Nodos</h1>
     <a class="btn btn-primary" href="/panel/nodos/crear">
       Nuevo Nodo
     </a>
@@ -27,7 +27,7 @@
             {{ $node->name }}
           </td>
           <td>
-            @city($node->city)
+            {{ city($node->city) }}
           </td>
           <td>
             <a href="/panel/nodos/{{$node->id}}/editar">Editar</a>

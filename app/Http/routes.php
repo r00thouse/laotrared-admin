@@ -31,3 +31,19 @@ Route::group(['middleware' => 'auth'], function() {
     Route::put('panel/nodos/{id}/editar', ['uses' => 'NodeController@update']);
     Route::delete('panel/nodos/{id}', ['uses' => 'NodeController@destroy']);
 });
+
+
+function city($short_name) {
+    $cities = [
+        'lapaz' => 'La Paz',
+        'beni' => 'Beni',
+        'cbba' => 'Cochabamba',
+        'stacruz' => 'Santa Cruz',
+        'oruro' => 'Oruro',
+        'potosi' => 'Potosí',
+        'tarija' => 'Tarija',
+        'pando' => 'Pando',
+        'sucre' => 'Sucre'
+    ];
+    return $cities[$short_name];
+}
