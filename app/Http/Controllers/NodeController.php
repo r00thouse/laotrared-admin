@@ -2,15 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Node;
 
 class NodeController extends Controller
 {
+    public function all()
+    {
+        $nodes = Node::all();
+
+        return response()->json($nodes, 200);
+    }
+
     public function index(Request $r)
     {
-        $nodes = Node::paginate();
+        $user = Auth::user();
+        $nodes = $user->nodes()->paginate(15);
 
         return view('nodes.index')
             ->with('nodes', $nodes);
@@ -18,7 +27,8 @@ class NodeController extends Controller
 
     public function show(Request $r, $id)
     {
-        $node = Node::findOrFail($id);
+        $user = Auth::user();
+        $node = $user->nodes()->findOrFail($id);
 
         return view('nodes.details')
             ->with('model', $node);
@@ -33,8 +43,9 @@ class NodeController extends Controller
 
     public function store(Request $r)
     {
+        $user = Auth::user();
         $node = new Node($r->all());
-        $node = $node->save();
+        $user->nodes()->save($node);
 
         return redirect('panel/nodos')
             ->with('message', 'Nodo creado exitosamente');
@@ -42,7 +53,9 @@ class NodeController extends Controller
 
     public function edit(Request $r, $id)
     {
-        $node = Node::findOrFail($id);
+        $user = Auth::user();
+        $node = $user->nodes()->findOrFail($id);
+
         return view('nodes.edit')
             ->with('method', 'put')
             ->with('model', $node);
@@ -50,7 +63,8 @@ class NodeController extends Controller
 
     public function update(Request $r, $id)
     {
-        $node = Node::findOrFail($id);
+        $user = Auth::user();
+        $node = $user->nodes()->findOrFail($id);
         $node->fill($r->all());
         $node->save();
 
@@ -60,7 +74,13 @@ class NodeController extends Controller
 
     public function destroy(Request $r, $id)
     {
-        $node = Node::findOrFail($id);
-        return $node->delete();
+        $user = Auth::user();
+        $node = $user->nodes()->findOrFail($id);
+        $result = $node->delete();
+
+        return response()->json([
+            'deleted' => $result,
+            'status' => 'ok'
+        ]);
     }
 }

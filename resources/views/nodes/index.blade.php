@@ -11,7 +11,8 @@
       <thead>
         <tr>
           <th class="col-md-1">#</th>
-          <th class="col-md-8">Nombre</th>
+          <th class="col-md-6">Nombre</th>
+          <th class="col-md-2">Departamento</th>
           <th></th>
           <th></th>
         </tr>
@@ -26,6 +27,9 @@
             {{ $node->name }}
           </td>
           <td>
+            @city($node->city)
+          </td>
+          <td>
             <a href="/panel/nodos/{{$node->id}}/editar">Editar</a>
           </td>
           <td>
@@ -35,6 +39,7 @@
     @endforeach
       </tbody>
     </table>
+    {!! $nodes->render() !!}
   </div>
 </div>
 @endsection

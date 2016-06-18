@@ -8,6 +8,11 @@ class Node extends Model
 {
     protected $table = 'nodes';
     protected $guarded = ['id'];
+    protected $casts = [
+        'latitude' => 'double',
+        'longitude' => 'double',
+        'id' => 'integer'
+    ];
 
     public function users()
     {

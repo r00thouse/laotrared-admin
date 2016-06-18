@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Node;
+
 class HomeController extends Controller
 {
     public function index()
@@ -11,6 +13,6 @@ class HomeController extends Controller
 
     public function getMap()
     {
-        return 'map';
+        return view('networkmap');
     }
 }

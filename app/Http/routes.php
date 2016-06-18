@@ -18,6 +18,7 @@ Route::get('/signup', ['uses' => 'Auth\AuthController@getRegister']);
 Route::post('/login', ['uses' => 'Auth\AuthController@postLogin']);
 
 Route::get('/mapa', ['uses' => 'HomeController@getMap']);
+Route::get('/nodos', ['uses' => 'NodeController@all']);
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('panel', ['uses' => 'NodeController@index']);
