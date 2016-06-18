@@ -33,8 +33,9 @@ class BaseTables extends Migration
                 $t->increments('id');
                 $t->string('name');
                 $t->text('description');
-                $t->decimal('latitude', 10, 2);
-                $t->decimal('longitude', 10, 2);
+                $t->string('city')->nullable();
+                $t->decimal('latitude', 11, 8);
+                $t->decimal('longitude', 11, 8);
                 $t->timestamps();
             });
 
@@ -61,9 +62,17 @@ class BaseTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nodes');
-        Schema::dropIfExists('password_resets');
-        Schema::dropIfExists('users');
-        Schema::dropIfExists('node_user');
+        \DB::beginTransaction();
+        try {
+            Schema::dropIfExists('password_resets');
+            Schema::dropIfExists('node_user');
+            Schema::dropIfExists('users');
+            Schema::dropIfExists('nodes');
+
+            \DB::commit();
+        } catch(Exception $e) {
+            \DB::rollback();
+        }
+
     }
 }
