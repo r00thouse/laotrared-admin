@@ -36,7 +36,7 @@ class NodeController extends Controller
         $node = new Node($r->all());
         $node = $node->save();
 
-        return redirect('dashboard/nodos')
+        return redirect('panel/nodos')
             ->with('message', 'Nodo creado exitosamente');
     }
 
@@ -54,7 +54,7 @@ class NodeController extends Controller
         $node->fill($r->all());
         $node->save();
 
-        return redirect('dashboard/nodos')
+        return redirect('panel/nodos')
             ->with('message', 'Nodo actualizado exitosamente');
     }
 
