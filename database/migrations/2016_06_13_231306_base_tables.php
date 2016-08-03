@@ -89,6 +89,7 @@ class BaseTables extends Migration
         \DB::beginTransaction();
         try {
             Schema::dropIfExists('password_resets');
+            Schema::dropIfExists('node_ipv4');
             Schema::dropIfExists('node_user');
             Schema::dropIfExists('users');
             Schema::dropIfExists('nodes');
