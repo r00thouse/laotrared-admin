@@ -21,15 +21,30 @@ Route::get('/mapa', ['uses' => 'HomeController@getMap']);
 Route::get('/nodos', ['uses' => 'NodeController@all']);
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('panel', ['uses' => 'NodeController@index']);
-    Route::get('panel/nodos', ['uses' => 'NodeController@index']);
-    Route::get('panel/nodos/crear', ['uses' => 'NodeController@create']);
-    Route::get('panel/nodos/{id}', ['uses' => 'NodeController@show']);
-    Route::get('panel/nodos/{id}/editar', ['uses' => 'NodeController@edit']);
+    Route::group(['middleware' => ['permission:read_network']], function() {
+        Route::get('panel/redes', ['uses' => 'NetworkController@index']);
+        Route::get('panel/redes/crear', ['uses' => 'NetworkController@create']);
+        Route::get('panel/redes/{id}', ['uses' => 'NetworkControler@show']);
+        Route::get('panel/redes/{id}/editar', ['uses' => 'NetworkController@edit']);
+    });
 
-    Route::post('panel/nodos/crear', ['uses' => 'NodeController@store']);
-    Route::put('panel/nodos/{id}/editar', ['uses' => 'NodeController@update']);
-    Route::delete('panel/nodos/{id}', ['uses' => 'NodeController@destroy']);
+    Route::post('panel/redes', ['uses' => 'NetworkController@store', 'middleware' => ['permission:create_network']]);
+    Route::put('panel/redes/{id}/editar', ['uses' => 'NetworkController@update', 'middleware' => ['permission:update_network']]);
+    Route::delete('panel/redes/{id}', ['uses' => 'NetworkController@destroy', 'middleware' => ['permission:delete_network']]);
+});
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::group(['middleware' => ['permission:read_node']], function() {
+        Route::get('panel', ['uses' => 'NodeController@index']);
+        Route::get('panel/nodos', ['uses' => 'NodeController@index']);
+        Route::get('panel/nodos/crear', ['uses' => 'NodeController@create']);
+        Route::get('panel/nodos/{id}', ['uses' => 'NodeController@show']);
+        Route::get('panel/nodos/{id}/editar', ['uses' => 'NodeController@edit']);
+    });
+
+    Route::post('panel/nodos/crear', ['uses' => 'NodeController@store', 'middleware' => ['permission:create_node']]);
+    Route::put('panel/nodos/{id}/editar', ['uses' => 'NodeController@update', 'middleware' => ['permission:update_node']]);
+    Route::delete('panel/nodos/{id}', ['uses' => 'NodeController@destroy', 'middleware' => ['permission:delete_node']]);
 });
 
 
