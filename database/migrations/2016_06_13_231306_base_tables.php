@@ -45,6 +45,8 @@ class BaseTables extends Migration
                 $t->string('physic_description');
                 $t->decimal('latitude', 11, 8);
                 $t->decimal('longitude', 11, 8);
+                $t->string('ipv4_range')->nullable();
+                $t->string('ipv6_range')->nullable();
                 $t->integer('network_id')->unsigned()->nullable();
                 $t->timestamps();
 
@@ -52,13 +54,16 @@ class BaseTables extends Migration
                     ->onUpdate('SET NULL');
             });
 
-            Schema::create('node_ipv4', function($t) {
+            Schema::create('network_user', function($t) {
                 $t->increments('id');
-                $t->string('range');
-                $t->integer('node_id')->unsigned();
-                $t->string('type', 5)->default('ipv4');
-                $t->timestamps();
-                $t->foreign('node_id')->references('id')->on('nodes');
+                $t->integer('network_id')->unsigned();
+                $t->integer('user_id')->unsigned();
+                $t->boolean('is_owner')->default(false);
+                $t->boolean('is_admin')->default(false);
+                $t->foreign('network_id')->references('id')->on('networks')
+                    ->onDelete('CASCADE');
+                $t->foreign('user_id')->references('id')->on('users')
+                    ->onDelete('CASCADE');
             });
 
             Schema::create('node_user', function($t) {
@@ -88,12 +93,12 @@ class BaseTables extends Migration
     {
         \DB::beginTransaction();
         try {
-            Schema::dropIfExists('password_resets');
-            Schema::dropIfExists('node_ipv4');
             Schema::dropIfExists('node_user');
-            Schema::dropIfExists('users');
+            Schema::dropIfExists('network_user');
             Schema::dropIfExists('nodes');
             Schema::dropIfExists('networks');
+            Schema::dropIfExists('users');
+            Schema::dropIfExists('password_resets');
 
             \DB::commit();
         } catch(Exception $e) {
