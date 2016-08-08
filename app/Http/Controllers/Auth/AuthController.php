@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
@@ -46,6 +47,23 @@ class AuthController extends Controller
     protected function getRegister()
     {
         return view('login.signup');
+    }
+
+    public function postRegister(Request $r)
+    {
+        if ($this->validator()->fails()) {
+            return redirect('/signup')
+                ->with('error', 'Datos incorrectos');
+        }
+
+        $user = new User();
+        $user->fill($r->only(['name', 'email']));
+        $user->password = bcrypt($r->get('password'));
+        $user->save();
+        $user->attachRole(parent::getRole('common'));
+
+        return redirect('/')
+            ->with('message', 'Registro completado exitosamente');
     }
 
 }
