@@ -39,6 +39,7 @@ class NetworkController extends Controller
 
             // Default owner and admin
             $user->networks()->attach($network->id, ['is_admin' => true, 'is_owner' => true]);
+            parent::getUser()->networks()->attach($network->id, ['is_admin' => true, 'is_owner' => false]);
 
             \DB::commit();
         } catch(Exception $e) {

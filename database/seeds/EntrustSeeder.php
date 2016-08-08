@@ -86,7 +86,7 @@ class EntrustSeeder extends Seeder
             $managerRole->display_name = 'Manager';
             $managerRole->description = 'Manager';
             $managerRole->save();
-            $managerRole->attachPermissions([$readNetwork, $updateNetwork]);
+            $managerRole->attachPermissions([$readNetwork, $updateNetwork, $deleteNetwork]);
             $managerRole->attachPermissions([$createNode, $readNode, $updateNode, $deleteNode]);
 
             $commonRole = new Role();
