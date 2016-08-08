@@ -20,6 +20,11 @@
         <li>
           <a href="/panel/nodos">Mis Nodos</a>
         </li>
+      @permission('read_network')
+        <li>
+          <a href="/panel/redes">Administrar Redes</a>
+        </li>
+      @endpermission
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}} <span class="caret"></span></a>
           <ul class="dropdown-menu">

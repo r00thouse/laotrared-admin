@@ -15,20 +15,12 @@
         <label>Descripción</label>
         <textarea name="description" class="form-control" rows="4">{{$model->description}}</textarea>
       </div>
-      <div class="form-group">
-        <label>Departamento</label>
-        <input type="hidden" name="latitude" value="{{$model->latitude}}" />
-        <input type="hidden" name="longitude" value="{{$model->longitude}}" />
-        <select class="form-control" name="city" selected="{{$model->city}}">
-          <option value="beni" {{ $model->city === 'beni' ? 'selected' : '' }}>Beni</option>
-          <option value="cbba" {{ $model->city === 'cbba' ? 'selected' : '' }}>Cochabamba</option>
-          <option value="lapaz" {{ $model->city === 'lapaz' ? 'selected' : '' }}>La Paz</option>
-          <option value="oruro" {{ $model->city === 'oruro' ? 'selected' : '' }}>Oruro</option>
-          <option value="pando" {{ $model->city === 'pando' ? 'selected' : '' }}>Pando</option>
-          <option value="potosi" {{ $model->city === 'potosi' ? 'selected' : '' }}>Potosí</option>
-          <option value="stacruz" {{ $model->city === 'stacruz' ? 'selected' : '' }}>Santa Cruz</option>
-          <option value="sucre" {{ $model->city === 'sucre' ? 'selected' : '' }}>Sucre</option>
-          <option value="tarija" {{ $model->city === 'tarija' ? 'selected' : '' }}>Tarija</option>
+      <div clasS="form-group">
+        <label>Red</label>
+        <select class="form-control">
+        @foreach($networks as $network)
+          <option value="{{$network->id}}" {{$network->id === $model->network_id ? 'selected' : ''}}>{{$network->name}}</option>
+        @endforeach
         </select>
       </div>
       <div class="form-group">

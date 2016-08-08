@@ -6,6 +6,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Node;
+use App\Models\Network;
 
 class NodeController extends Controller
 {
@@ -36,7 +37,10 @@ class NodeController extends Controller
 
     public function create(Request $r)
     {
+        $networks = Network::all();
+
         return view('nodes.edit')
+            ->with('networks', $networks)
             ->with('method', 'post')
             ->with('model', new Node());
     }

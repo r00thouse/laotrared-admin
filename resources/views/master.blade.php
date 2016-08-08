@@ -13,7 +13,7 @@
   @yield('styles')
 </head>
 <body>
-
+<input id="global_crsf_token" type="hidden" value="{{csrf_token()}}" />
 <div id="wrapper">
 @if(Auth::check())
   @include('widgets.navbar')

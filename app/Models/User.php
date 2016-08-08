@@ -14,6 +14,11 @@ class User extends Authenticatable
     protected $fillable = ['name', 'email', 'password',];
     protected $hidden = ['password', 'remember_token',];
 
+    public function networks()
+    {
+        return $this->belongsToMany('App\Models\Network');
+    }
+
     public function nodes()
     {
         return $this->belongsToMany('App\Models\Node');
