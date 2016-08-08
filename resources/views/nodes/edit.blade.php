@@ -17,16 +17,16 @@
       </div>
       <div clasS="form-group">
         <label>Red</label>
-        <select class="form-control">
+        <select class="form-control" name="network_id">
         @foreach($networks as $network)
-          <option value="{{$network->id}}" {{$network->id === $model->network_id ? 'selected' : ''}}>{{$network->name}}</option>
+          <option value="{{$network->id}}" {{$network->id == $model->network_id ? 'selected' : ''}}>{{$network->name}}</option>
         @endforeach
         </select>
       </div>
       <div class="form-group">
         <label>Ubicación</label>
-        <input type="hidden" name="latitude" />
-        <input type="hidden" name="longitude" />
+        <input type="hidden" name="latitude" value="{{$model->latitude}}" />
+        <input type="hidden" name="longitude" value="{{$model->longitude}}" />
         <div id="mapid"></div>
       </div>
       <div class="form-group">
@@ -66,7 +66,7 @@ $(document).ready(function() {
   var mymap = L.map('mapid').setView([position.lat, position.lng], zoom);
   L.tileLayer(tileServer, {
     attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    maxZoom: 18
+    maxZoom: 5
   }).addTo(mymap);
 
   if (document.forms[0]['_method'].value === 'put') {

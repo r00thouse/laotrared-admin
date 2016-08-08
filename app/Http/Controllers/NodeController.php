@@ -57,12 +57,13 @@ class NodeController extends Controller
 
     public function edit(Request $r, $id)
     {
-        $user = Auth::user();
+        $user = parent::getUser();
+        $networks = Network::all();
         $node = $user->nodes()->findOrFail($id);
 
         return view('nodes.edit')
             ->with('method', 'put')
-            ->with('networks', [])
+            ->with('networks', $networks)
             ->with('model', $node);
     }
 
