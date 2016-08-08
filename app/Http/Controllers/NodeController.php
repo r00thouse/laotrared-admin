@@ -62,6 +62,7 @@ class NodeController extends Controller
 
         return view('nodes.edit')
             ->with('method', 'put')
+            ->with('networks', [])
             ->with('model', $node);
     }
 

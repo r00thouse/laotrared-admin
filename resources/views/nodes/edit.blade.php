@@ -25,6 +25,8 @@
       </div>
       <div class="form-group">
         <label>Ubicación</label>
+        <input type="hidden" name="latitude" />
+        <input type="hidden" name="longitude" />
         <div id="mapid"></div>
       </div>
       <div class="form-group">
