@@ -66,7 +66,7 @@ $(document).ready(function() {
   var mymap = L.map('mapid').setView([position.lat, position.lng], zoom);
   L.tileLayer(tileServer, {
     attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    maxZoom: 5
+    maxZoom: 18
   }).addTo(mymap);
 
   if (document.forms[0]['_method'].value === 'put') {
