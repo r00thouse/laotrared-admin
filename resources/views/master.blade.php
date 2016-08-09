@@ -15,9 +15,7 @@
 <body>
 <input id="global_crsf_token" type="hidden" value="{{csrf_token()}}" />
 <div id="wrapper">
-@if(Auth::check())
-  @include('widgets.navbar')
-@endif
+@include('widgets.navbar')
 @yield('content')
 </div>
 <script src="/assets/js/jquery-2.2.4.min.js"></script>

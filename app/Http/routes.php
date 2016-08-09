@@ -19,7 +19,6 @@ Route::get('/logout', ['uses' => 'Auth\AuthController@logout']);
 Route::get('/signup', ['uses' => 'Auth\AuthController@getRegister']);
 Route::post('signup', ['uses' => 'Auth\AuthController@postRegister']);
 
-Route::get('/mapa', ['uses' => 'HomeController@getMap']);
 Route::get('/nodos', ['uses' => 'NodeController@all']);
 
 Route::group(['middleware' => 'auth'], function() {

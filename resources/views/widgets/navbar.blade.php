@@ -8,14 +8,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">LaOtraRed</a>
+      <a class="navbar-brand" href="/">LaOtraRed</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/mapa">Mapa de la Red</a></li>
+        <li><a href="/">Mapa de la Red</a></li>
       </ul>
+    @if(Auth::check())
       <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="/panel/nodos">Mis Nodos</a>
@@ -34,6 +35,16 @@
           </ul>
         </li>
       </ul>
+    @else
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/login">Login</a>
+        </li>
+        <li>
+          <a href="/signup">Registro</a>
+        </li>
+      </ul>
+    @endif
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
