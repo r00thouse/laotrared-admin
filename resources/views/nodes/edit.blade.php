@@ -27,7 +27,7 @@
         <label>Ubicación</label>
         <input type="hidden" name="latitude" value="{{$model->latitude}}" />
         <input type="hidden" name="longitude" value="{{$model->longitude}}" />
-        <div id="mapid"></div>
+        <div id="mapid" class="map"></div>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-success">
@@ -39,12 +39,6 @@
     </form>
   </div>
 </div>
-@endsection
-
-@section('styles')
-<style type="text/css" media="screen">
-  #mapid { height: 400px;}
-</style>
 @endsection
 
 @section('scripts')

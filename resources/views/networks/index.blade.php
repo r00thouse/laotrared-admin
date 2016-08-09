@@ -27,30 +27,3 @@
   </div>
 </div>
 @endsection
-
-@section('styles')
-<style type="text/css" media="screen">
-  .network-list {
-    margin: 10px 10px 10px 0;
-    padding: 0;
-  }
-  .network-list .network {
-    width: 280px;
-    display: inline-block;
-    height: 180px;
-    background: #AFBA98;
-    padding: 10px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    vertical-align: top;
-  }
-  .network h3 {
-    margin: 0;
-  }
-  .network .content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 85px;
-  }
-</style>
-@endsection

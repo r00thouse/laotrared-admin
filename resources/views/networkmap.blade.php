@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
   <div class="col-md-8">
-    <div id="network-map"></div>
+    <div id="network-map" class="map"></div>
   </div>
   <div class="col-md-4">
     <h3>Información de nodo</h3>
@@ -12,14 +12,6 @@
     </div>
   </div>
 </div>
-@endsection
-
-@section('styles')
-<style type="text/css" media="screen">
-  #network-map {
-    height: 400px;
-  }
-</style>
 @endsection
 
 @section('scripts')

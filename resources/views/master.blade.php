@@ -5,12 +5,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/leaflet.css" />
   <link rel="stylesheet" href="/assets/css/notie.css" />
-  <style type="text/css" media="screen">
-    #wrapper {
-      margin-left: 16px;
-      margin-right: 16px;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/main.css" />
   @yield('styles')
 </head>
 <body>
