@@ -4,6 +4,6 @@ $(document).ready(function(){
 
   var message = messageEl.innerHTML,
     type = messageEl.dataset.type
-    notificationDuration = 2;
+    notificationDuration = 1;
   notie.alert(type, message, notificationDuration)
 });

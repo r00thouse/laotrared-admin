@@ -5,6 +5,10 @@
 .map {
   height: 400px;
 }
+label[data-validator=required]:after {
+  content: ' *';
+  color: #EC2020;
+}
 .network-list {
   margin: 10px 10px 10px 0;
   padding: 0;
