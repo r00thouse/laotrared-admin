@@ -62,6 +62,9 @@ class NodeController extends Controller
         $user = parent::getUser();
         $node = new Node();
         $node->fill($data);
+        $node->privacy_mode = false;
+        $node->fake_latitude = $node->latitude;
+        $node->fake_longitude = $node->longitude;
         if ($r->get('privacy_mode')) {
             $node->privacy_mode = true;
             $node->fake_latitude = $node->latitude + self::getRandomDouble();
