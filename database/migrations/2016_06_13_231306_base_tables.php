@@ -42,10 +42,12 @@ class BaseTables extends Migration
                 $t->increments('id');
                 $t->string('name');
                 $t->text('description');
-                $t->string('physic_description');
+                $t->string('physical_description');
                 $t->decimal('latitude', 11, 8);
                 $t->decimal('longitude', 11, 8);
-                $t->string('ipv4_range')->nullable();
+                $t->decimal('fake_latitude', 11, 8);
+                $t->decimal('fake_longitude', 11, 8);
+                $t->boolean('privacy_mode')->default(false);
                 $t->string('ipv6_range')->nullable();
                 $t->integer('network_id')->unsigned()->nullable();
                 $t->timestamps();

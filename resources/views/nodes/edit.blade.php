@@ -1,22 +1,35 @@
 @extends('master')
 
 @section('content')
+<?php
+  if(Session::has('model')) {
+    $model = Session::get('model');
+  }
+?>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <h1>Información del Nodo</h1>
     <form method="post" accept-charset="utf-8" class="form" id="node-form">
       {{csrf_field()}}
       {{method_field($method)}}
-      <div class="form-group">
-        <label>Nombre</label>
+      <div class="form-group" >
+        <label data-validator="required">Nombre</label>
         <input class="form-control" name="name" type="text" placeholder="Nombre del nodo..." autocomplete="off" value="{{$model->name}}" />
       </div>
       <div class="form-group">
-        <label>Descripción</label>
+        <label data-validator="required">Descripción</label>
         <textarea name="description" class="form-control" rows="4">{{$model->description}}</textarea>
       </div>
-      <div clasS="form-group">
-        <label>Red</label>
+      <div class="form-group">
+        <label>Zona/Barrio</label>
+        <input type="text" name="physical_description" class="form-control" placeholder="Ej. Zona Bolviar en la avenida principal" autocomplete="off" value="{{$model->physical_description}}" />
+      </div>
+      <div class="form-group">
+        <label><input type="checkbox" name="privacy_mode" value="true" {{ $model->privacy_mode ? 'checked' : '' }} /> Modo Privacidad?</label>
+        <span><i>La ubicación original desviada de forma aleatoria en un radio de 50 metros</i></span>
+      </div>
+      <div class="form-group">
+        <label data-validator="required">Red</label>
         <select class="form-control" name="network_id">
         @foreach($networks as $network)
           <option value="{{$network->id}}" {{$network->id == $model->network_id ? 'selected' : ''}}>{{$network->name}}</option>
@@ -30,7 +43,7 @@
         <div id="mapid" class="map"></div>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-success">
+        <button type="submit" onclick="javascript:console.log('fff')" class="btn btn-success">
           Guardar Cambios
         </button>
         &nbsp;

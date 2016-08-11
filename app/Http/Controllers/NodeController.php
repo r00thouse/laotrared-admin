@@ -12,7 +12,7 @@ class NodeController extends Controller
 {
     public function all()
     {
-        $nodes = Node::all();
+        $nodes = Node::select(['id', 'name', 'description', 'fake_latitude as latitude', 'fake_longitude as longitude', 'physical_description'])->get();
 
         return response()->json($nodes, 200);
     }
@@ -47,8 +47,26 @@ class NodeController extends Controller
 
     public function store(Request $r)
     {
-        $user = Auth::user();
-        $node = new Node($r->all());
+        $data = $r->only([
+            'name', 'description', 'physical_description',
+            'network_id', 'latitude', 'longitude'
+        ]);
+
+        $network = Network::find($data['network_id']);
+        if (!$network) {
+            return redirect('panel/nodos/crear')
+                ->with('error', 'Red inválida')
+                ->with('model', new Node($data));
+        }
+
+        $user = parent::getUser();
+        $node = new Node();
+        $node->fill($data);
+        if ($r->get('privacy_mode')) {
+            $node->privacy_mode = true;
+            $node->fake_latitude = $node->latitude + self::getRandomDouble();
+            $node->fake_longitude = $node->longitude + self::getRandomDouble();
+        }
         $user->nodes()->save($node);
 
         return redirect('panel/nodos')
@@ -69,9 +87,27 @@ class NodeController extends Controller
 
     public function update(Request $r, $id)
     {
-        $user = Auth::user();
+        $user = parent::getUser();
         $node = $user->nodes()->findOrFail($id);
-        $node->fill($r->all());
+        $data = $r->only([
+            'name', 'description', 'physical_description',
+            'network_id', 'latitude', 'longitude'
+        ]);
+        $network = Network::find($data['network_id']);
+        if (!$network) {
+            return redirect('panel/nodos/crear')
+                ->with('error', 'Red inválida')
+                ->with('model', $node);
+        }
+        $node->fill($data);
+        $node->privacy_mode = false;
+        $node->fake_latitude = $node->latitude;
+        $node->fake_longitude = $node->longitude;
+        if ($r->get('privacy_mode')) {
+            $node->privacy_mode = true;
+            $node->fake_latitude = $node->latitude + self::getRandomDouble();
+            $node->fake_longitude = $node->longitude + self::getRandomDouble();
+        }
         $node->save();
 
         return redirect('panel/nodos')
@@ -80,7 +116,7 @@ class NodeController extends Controller
 
     public function destroy(Request $r, $id)
     {
-        $user = Auth::user();
+        $user = parent::getUser();
         $node = $user->nodes()->findOrFail($id);
         $result = $node->delete();
 
@@ -88,5 +124,11 @@ class NodeController extends Controller
             'deleted' => $result,
             'status' => 'ok'
         ]);
+    }
+
+    private function getRandomDouble()
+    {
+        $random = random_int(100, 555);
+        return ($random % 2 == 0 ? -1 : 1) * doubleval("0.000$random");
     }
 }

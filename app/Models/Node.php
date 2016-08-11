@@ -11,6 +11,7 @@ class Node extends Model
     protected $casts = [
         'latitude' => 'double',
         'longitude' => 'double',
+        'privacy_mode' => 'boolean',
         'id' => 'integer'
     ];
 
