@@ -16,6 +16,9 @@
 
 @section('scripts')
 <script type="text/javascript">
+function escapeXSS(content) {
+  return content.replace(new RegExp('<', 'g'), '&lt;').replace(new RegExp('>', 'g'), '&gt;');
+}
 $(document).ready(function() {
   var accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
   var tileServer = 'https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + accessToken;
@@ -39,16 +42,16 @@ $(document).ready(function() {
 
   $.ajax('/nodos').then(function(res) {
     res.forEach(function(item, index) {
-      var marker = L.marker([item.latitude, item.longitude], { icon: routerIcon });
+      var marker = L.marker([item.latitude, item.longitude]);
       marker.data = item;
       marker.on('click', function() {
         var infoEl = document.getElementById('info');
         var tpl = '';
         tpl += '<b>Nombre:</b><br/>' + this.data.name;
         tpl += '<br/><b>Descripción:</b> <br/><p>';
-        tpl += escape(this.data.description);
+        tpl += escapeXSS(this.data.description);
         tpl += '</p><b>Ubicación</b>: <br /><p>';
-        tpl += escape(this.data.physic_description);
+        tpl += escapeXSS(this.data.physical_description);
         tpl += '</p><b>Segmento de Red</b>:'
         tpl += '<br/>IPv4: ' + (this.data.ipv4_range || 'Sin Asignar');
         tpl += '<br/>IPv6: ' + (this.data.ipv4_range || 'Sin Asignar');
