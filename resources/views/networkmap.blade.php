@@ -23,8 +23,8 @@ $(document).ready(function() {
   var accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
   var tileServer = 'https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + accessToken;
   var position = {
-    lat: -16.80454107638344,
-    lng: -66.368408203125,
+    lat: -16.5103403,
+    lng: -68.1470345,
   };
   var routerIcon = L.icon({
       iconUrl: '/assets/img/router.png',
@@ -34,10 +34,11 @@ $(document).ready(function() {
       shadowAnchor: [4, 62],  // the same for the shadow
   });
 
-  var mymap = L.map('network-map').setView([position.lat, position.lng], 5);
+  var mymap = L.map('network-map').setView([position.lat, position.lng], 11);
   L.tileLayer(tileServer, {
     attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    maxZoom: 18
+    maxZoom: 18,
+    minZoom: 6
   }).addTo(mymap);
 
   $.ajax('/nodos').then(function(res) {
