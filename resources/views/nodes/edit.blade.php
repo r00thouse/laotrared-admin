@@ -13,8 +13,8 @@
       {{csrf_field()}}
       {{method_field($method)}}
       <div class="form-group" >
-        <label data-validator="required">Nombre</label>
-        <input class="form-control" name="name" type="text" placeholder="Nombre del nodo..." autocomplete="off" value="{{$model->name}}" />
+        <label data-validator="required">Nombre del Nodo</label>
+        <input class="form-control" name="name" type="text" placeholder="Nodo Patito" autocomplete="off" value="{{$model->name}}" />
       </div>
       <div class="form-group">
         <label data-validator="required">Descripción</label>
@@ -22,14 +22,10 @@
       </div>
       <div class="form-group">
         <label>Zona/Barrio</label>
-        <input type="text" name="physical_description" class="form-control" placeholder="Ej. Zona Bolviar en la avenida principal" autocomplete="off" value="{{$model->physical_description}}" />
+        <input type="text" name="physical_description" class="form-control" placeholder="Ej. Zona Bolivar en la avenida principal" autocomplete="off" value="{{$model->physical_description}}" />
       </div>
       <div class="form-group">
-        <label><input type="checkbox" name="privacy_mode" value="true" {{ $model->privacy_mode ? 'checked' : '' }} /> Modo Privacidad?</label>
-        <span><i>La ubicación original desviada de forma aleatoria en un radio de 50 metros</i></span>
-      </div>
-      <div class="form-group">
-        <label data-validator="required">Red</label>
+        <label data-validator="required">Red Libre</label>
         <select class="form-control" name="network_id">
         @foreach($networks as $network)
           <option value="{{$network->id}}" {{$network->id == $model->network_id ? 'selected' : ''}}>{{$network->name}}</option>
@@ -41,6 +37,10 @@
         <input type="hidden" name="latitude" value="{{$model->latitude}}" />
         <input type="hidden" name="longitude" value="{{$model->longitude}}" />
         <div id="mapid" class="map"></div>
+      </div>
+      <div class="form-group">
+        <label><input type="checkbox" name="privacy_mode" value="true" {{ $model->privacy_mode ? 'checked' : '' }} /> Modo Privacidad Extendida</label>
+        <span><i>Se guardará la ubicación original exacta, pero en los mapas públicos y generales aparecerá desviada de forma aleatoria en un radio de 50 metros. Ideal para nodos privados.</i></span>
       </div>
       <div class="form-group">
         <button type="submit" onclick="javascript:console.log('fff')" class="btn btn-success">
